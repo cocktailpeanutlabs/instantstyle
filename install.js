@@ -14,9 +14,13 @@ module.exports = async (kernel) => {
       params: {
         venv: "env",
         path: "app",
-        message: [
-          "pip install -r requirements.txt"
-        ],
+        message: "pip install -r requirements.txt"
+      }
+    }, {
+      method: "shell.run",
+      params: {
+        path: "app",
+        message: "python ipadapter.py"
       }
     }, {
       method: "fs.share",
